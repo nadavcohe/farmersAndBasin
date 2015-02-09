@@ -1,30 +1,24 @@
-struct Node{
-    char data;
-    Node* pParent;
-    Node* pRchild;
-    Node* pLchild;
+#include <iostream>
+using namespace std;
+
+struct BinaryTreeNode{
+    int data;
+    Node *m_pParent;
+    Node *m_pLeft;
+    Node *m_pRight;
 };
 
-// find next in left center right
+// inorder travers
+void travers_inorder(BinaryTreeNode *node){
+    if (node == NULL)
+        return;
+    travers_inorder(node->m_pLeft);
+    cout << data << "\t";
+    travers_inorder(node->m_pRight);
+}
 
-Node * find_next(Node * current){
-    if (current == NULL){
-        return NULL;
-    }
-    Node * next=NULL;
-    if ((current->pRchild) != NULL){
-        next = current->pRchild;
-        while (next->pLchild != NULL){
-            next = next->pLchild;
-        }
-        return (next);
-    } else if (current->pParent != NULL ){
-        next = current->pParent;
-        while ((next != NULL) && (next->pLchild != current)){
-            current = next;
-            next = next->pParent
-        }
-    }
-    
-    return (next);
+//using 
+
+int main(){
+    return 0;
 }
