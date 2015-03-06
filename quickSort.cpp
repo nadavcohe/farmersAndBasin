@@ -35,3 +35,10 @@ int pivot(int a[], int first, int last)
    swap(a[p], a[first]);
    return p;
 }
+
+void swap(int& a, int& b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
