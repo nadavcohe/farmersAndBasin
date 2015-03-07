@@ -11,11 +11,12 @@ void swap(Colors &a,Colors &b){
 // n space soulution is to build a new array;
 // i want n time 1 space;
 bool dutch_sort(Colors array[],int n){
+	if (array == NULL || n<0)
+		return false;
     int start=-1;
     int end=n;
     int itr=0;
     while(itr<end){
-    	cout << array[itr] << " " << start << "," << end << endl;
         switch (array[itr]){
             case RED:
                 swap(array[itr],array[++start]);

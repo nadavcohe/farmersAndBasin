@@ -1,14 +1,14 @@
 void getLeastKNumbers(int[] input, int[] output,int n,int k) {
     int start = 0;
     int end = n - 1;
-    int index = partition(input, start, end);
+    int index = pivot(input, start, end);
     while(index != k - 1) {
         if(index > k - 1) {
             end = index - 1;
-            index = partition(input, start, end);
+            index = pivot(input, start, end);
         }else {
             start = index + 1;
-            index = partition(input, start, end);
+            index = pivot(input, start, end);
         }
     }
     for(int i = 0; i < k; ++i)

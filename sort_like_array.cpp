@@ -20,7 +20,7 @@ void likeSort(int array[], int n){
 		if ((array[i-1]<array[i])==stiwchMode){
 			switchArr(array,i-1,i);
 		}
-	}	
+	}
 }
 
 int main(){

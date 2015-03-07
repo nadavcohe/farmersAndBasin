@@ -3,7 +3,7 @@
 using namespace std;
 
 // array that is shifter from the start to the end
-// example 2 3 4 5 6 7 8 9 10 1  , 2 2 2 2 2 4 2 2 2
+// example 2 3 4 5 6 7 8 9 10 1  , 2 2 2 2 2 4 2 2 2 2 , 3 4 5 6 7 8 9 10 1 2
 
 int findShift(int array[],int n){
 	if (array==NULL){
@@ -14,8 +14,7 @@ int findShift(int array[],int n){
 	int mid;
 	while (end-start > 1){
 	    
-		mid = (start+end)/2;
-		cout << start << " " <<  end << " " << array[mid] << endl;
+		mid = (start +(end-start)/2);
 		if (array[start] > array[mid]){
 			end = mid;
 		}else if (array[mid] > array[end]) {
@@ -29,7 +28,7 @@ int findShift(int array[],int n){
 		while (array[start++] <=array[end]){};
 	}
 	
-	return (start);
+	return (array[start]);
 	
 }
 

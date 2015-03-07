@@ -16,12 +16,12 @@ void addArr(int a[],int b[],int n){
 int main(){
 	int n;
 	cin >> n;
-	int a[n+1] = {0};
-	int b[n+1] = {0};
+	int a[n] = {0};
+	int b[n] = {0};
 	a[0]=1;
 	b[0]=1;
 	int itr=0;
-	while ((a[n]==0) && (b[n]==0)){
+	while ((a[n-1]==0) && (b[n-1]==0)){
 		if (itr % 2 ==0){
 			addArr(a,b,n+1);
 		}else{
