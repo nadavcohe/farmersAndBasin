@@ -9,7 +9,7 @@ int mergeInt(int a,int b){
 	a <<= 4;
 	return (a | b);
 }
-
+//check
 // find out how many leading 1 to know how many double hex we need
 int firstOnes(int a){
 	int check = 1 << 7;
